@@ -13,6 +13,7 @@ PYTHON_PROJECT_PATH = "C:/Users/" + os.environ["USERNAME"] + "/PycharmProjects/t
 
 OUTPUT_DIR = "output"
 
+# sequence attribute
 IC_SEQ_NUMBER = {1, 2, 6, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20}
 OB_SEQ_NUMBER = {6, 15, 17, 18, 19, 20}
 DE_SEQ_NUMBER = {3, 4, 6, 8, 9, 10, 11, 14, 18, 19, 20}
@@ -328,8 +329,8 @@ def get_success_ratio_array(iou_list, csv_additional_name):
     now = datetime.now()
     date = now.strftime("%Y-%m-%d_%H-%M-%S")
 
-    chat_range = 0.1
-    chat_step = 0.0001
+    chat_range = 1.0
+    chat_step = 0.001
 
     with open(OUTPUT_DIR + "/" + date + csv_additional_name + " Success Ratio.csv", 'w', newline="") as f:
         writer = csv.writer(f)
